@@ -85,7 +85,7 @@ app.post("/api/submit-form", async (req, res) => {
 
     // Add data to Google Sheets
     await sheet.addRow({
-      Timestamp: new Date().toISOString(),
+      Timestamp: new Date().toLocaleDateString(),
       Name: name,
       Email: email,
       Password: password,
